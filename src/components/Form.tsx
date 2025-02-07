@@ -19,7 +19,8 @@ export const Form = ({name, email, onsubmit, nameChange, emailChange}: FormTypes
                     <input type='text' className={styles.input} onChange={nameChange}/>
                     <label className={styles.label}>Email</label>
                     <input type='email' className={styles.input} onChange={emailChange}/>
-                    <input type='submit' onClick={onsubmit} className='bg-blue-500 mt-8 hover:bg-blue-400 text-white font-bold py-2 px-4  hover:border-blue-500 rounded' value={'Submit'} />
+                    <input type='submit' onClick={onsubmit} className='bg-blue-500 mt-8 hover:bg-blue-400
+                     text-white font-bold py-2 px-4  hover:border-blue-500 rounded' value={'Submit'} />
                 </form>
             </div>
         </div>

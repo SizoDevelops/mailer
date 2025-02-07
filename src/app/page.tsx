@@ -39,7 +39,7 @@ export default function Home() {
   }
   return (
    <React.Fragment> 
-        <Form name={name} email={email} onsubmit={onFormSubmitted} nameChange={handleNameChange} emailChange={handleEmailChange}/>  
+        <Form name={name} email={email} nameChange={handleNameChange} emailChange={handleEmailChange} onsubmit={onFormSubmitted}/>  
    </React.Fragment>
   );
 }
