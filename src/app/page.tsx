@@ -7,7 +7,7 @@ export default function Home() {
 
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
-
+  const [loading, setLoading] = React.useState(false);
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
@@ -19,6 +19,7 @@ export default function Home() {
 
   const onFormSubmitted  =(event: React.FormEvent) => {
       event.preventDefault();
+      setLoading(true);
       fetch('/api/send-email', {
           method: 'POST',
           cache: 'no-cache',
@@ -32,6 +33,9 @@ export default function Home() {
       })
       .then(res => res.json())
       .then(data => {
+          setLoading(false);
+          setEmail('');
+          setName('');
           console.log(data);
       });
 
@@ -39,7 +43,7 @@ export default function Home() {
   }
   return (
    <React.Fragment> 
-        <Form name={name} email={email} nameChange={handleNameChange} emailChange={handleEmailChange} onsubmit={onFormSubmitted}/>  
+        <Form name={name} email={email} isLoading={loading} nameChange={handleNameChange} emailChange={handleEmailChange} onsubmit={onFormSubmitted}/>  
    </React.Fragment>
   );
 }
