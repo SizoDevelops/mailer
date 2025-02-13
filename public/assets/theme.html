@@ -26,23 +26,19 @@ if (locals.action) {
   }
 }
 %>
-<!DOCTYPE html>
-<!-- <img src="https://i.ibb.co/Kz91fYnk/Dates.png" alt="Dates" border="0">
-<img src="https://i.ibb.co/5X2pNrM3/Phone.png" alt="Phone" border="0">
-<img src="https://i.ibb.co/HLPYK2j3/Price1.png" alt="Price1" border="0">
-<img src="https://i.ibb.co/JRFvJTzp/Price2.png" alt="Price2" border="0">
-<img src="https://i.ibb.co/k2FvS0gk/ScanA.png" alt="ScanA" border="0">
-<img src="https://i.ibb.co/QFVjvRc1/Table.png" alt="Table" border="0"> -->
-<html lang="en" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title></title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><!--[if !mso]><!-->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css"/><!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><!--[if !mso]><!-->
+<style type="text/css" rel="stylesheet" media="all"></style><!--<![endif]-->
 <style>
-		* {
-			box-sizing: border-box;
-		}
+	*:not(br):not(tr):not(html) {
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
 
 		body {
 			margin: 0;
@@ -130,7 +126,7 @@ if (locals.action) {
 		}
 	</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
 </head>
-<body class="body" style="background-color: #ffffff; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+<body class="body" style="background-color: #ffffff; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;" dir="<%- textDirection %>">
 <table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;" width="100%">
 <tbody>
 <tr>
@@ -420,21 +416,5 @@ if (locals.action) {
 </tr>
 </tbody>
 </table><!-- End -->
-
-<% if (locals.goToAction) { %>
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "EmailMessage",
-        "potentialAction": {
-            "@type": "ViewAction",
-            "url": "<%- goToAction.link %>",
-            "target": "<%- goToAction.link %>",
-            "name": "<%- goToAction.text %>"
-        },
-        "description": "<%- goToAction.description %>"
-    }
-    </script>
-<% } %>
 </body>
 </html>

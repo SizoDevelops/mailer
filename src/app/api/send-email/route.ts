@@ -8,7 +8,7 @@ const Mailgen = require("mailgen")
 
 const mailGenerator = new Mailgen({
   theme: {
-    path: path.resolve("public/assets/theme.html"),
+    path: path.resolve("public/assets/default.html"),
     plaintextPath: path.resolve("public/assets/theme.txt"),
   },
   product: {
